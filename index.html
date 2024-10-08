@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Matemáticas Interactivas con AR</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/matematicas.css">
+</head>
+
+<body>
+  <!-- Botón para abrir el sidebar -->
+  <button id="openSidebar" class="open-btn">☰ Menú</button>
+
+  <!-- Barra lateral -->
+  <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" id="closeSidebar">×</a>
+    <a href="#aritmetica">Aritmética</a>
+    <a href="#geometria">Geometría</a>
+    <a href="#fracciones">Fracciones</a>
+    <a href="#multiplicacion">Multiplicación</a>
+  </div>
+
+  <!-- Barra superior -->
+  <header>
+    <h1>Panel de Matemáticas Interactivas - Tercer Año Básica</h1>
+  </header>
+
+  <!-- Sección de actividades en el dashboard -->
+  <section id="dashboard">
+    <h2>Selecciona una Actividad</h2>
+
+    <!-- Aritmética -->
+    <div class="actividad" id="aritmetica">
+      <h3>Aritmética - Sumas y Restas</h3>
+      <p>Aprende sobre sumas y restas de forma interactiva. Usa la Realidad Aumentada para visualizar los números.</p>
+      <a class="AR-button" href="https://console.echoar.xyz/webar?key=YOUR_AR_KEY&entry=aritmetica-ra">
+        Ver en Realidad Aumentada
+      </a>
+      <canvas id="aritmetica3d"></canvas>
+    </div>
+
+    <!-- Geometría -->
+    <div class="actividad" id="geometria">
+      <h3>Geometría - Figuras 3D</h3>
+      <p>Explora figuras geométricas en 3D y comprueba sus propiedades usando Realidad Aumentada.</p>
+      <a class="AR-button" href="https://console.echoar.xyz/webar?key=YOUR_AR_KEY&entry=geometria-ra">
+        Ver en Realidad Aumentada
+      </a>
+      <canvas id="geometria3d"></canvas>
+    </div>
+
+    <!-- Fracciones -->
+    <div class="actividad" id="fracciones">
+      <h3>Fracciones</h3>
+      <p>Aprende sobre fracciones visualizando cortes de una pizza o pastel en Realidad Aumentada.</p>
+      <a class="AR-button" href="https://console.echoar.xyz/webar?key=YOUR_AR_KEY&entry=fracciones-ra">
+        Ver en Realidad Aumentada
+      </a>
+      <canvas id="fracciones3d"></canvas>
+    </div>
+
+    <!-- Multiplicación -->
+    <div class="actividad" id="multiplicacion">
+      <h3>Multiplicación</h3>
+      <p>Practica la tabla de multiplicar interactuando con objetos 3D. Usa la Realidad Aumentada para verlo en acción.</p>
+      <a class="AR-button" href="https://console.echoar.xyz/webar?key=YOUR_AR_KEY&entry=multiplicacion-ra">
+        Ver en Realidad Aumentada
+      </a>
+      <canvas id="multiplicacion3d"></canvas>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Unidad Educativa "Quince de Octubre" - Matemáticas Interactivas para Tercer Año Básica</p>
+  </footer>
+
+  <!-- Script para carga 3D y funcionalidades -->
+  <script src="js/matematicas.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/sidebar.js"></script> <!-- Nuevo script para la barra lateral -->
+</body>
+
+</html>
